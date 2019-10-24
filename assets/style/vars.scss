@@ -1,0 +1,24 @@
+// FONTS
+:root {
+  --font-size: 18px;
+  --font-family: 'Source Sans Pro' -apple-system, SF Pro Text, SF UI Text,
+    system-ui, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --line-height: 1.27;
+  --text-color: var(--color-from-hell);
+}
+
+// COLORS
+:root {
+  --color-white: #ffffff;
+  --color-light-orange: #ff972f;
+  --color-orange: #f16922;
+  --color-green: #40d62b;
+  --color-brightest-grayish-blue: #f0f2fd;
+  --color-lighten-grayish-blue: #ebeffc;
+  --color-light-grayish-blue: #cfd4e9;
+  --color-grayish-blue: #a1a8c2;
+  --color-dark-blue: #0f2162;
+  --color-from-hell: #666666;
+  --color-dark-gray: #333333;
+  --color-black: #000000;
+}
