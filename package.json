@@ -14,7 +14,8 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "ant-design-vue": "^1.4.3",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "postsvg": "^2.2.7"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
@@ -26,6 +27,7 @@
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.0.1",
     "node-sass": "^4.13.0",
+    "posthtml-render": "^1.1.5",
     "prettier": "^1.16.4",
     "sass-loader": "^8.0.0"
   }

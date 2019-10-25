@@ -1,7 +1,7 @@
 // FONTS
 :root {
   --font-size: 18px;
-  --font-family: 'Source Sans Pro' -apple-system, SF Pro Text, SF UI Text,
+  --font-family: 'Source Sans Pro', -apple-system, SF Pro Text, SF UI Text,
     system-ui, Helvetica Neue, Helvetica, Arial, sans-serif;
   --line-height: 1.27;
   --text-color: var(--color-from-hell);
@@ -21,4 +21,11 @@
   --color-from-hell: #666666;
   --color-dark-gray: #333333;
   --color-black: #000000;
+}
+
+// Recucle Animation
+:root {
+  --recucle-width: 470px;
+  --recucle-height: 470px;
+  --recucle-icon-width: 40.425%;
 }
