@@ -1,7 +1,7 @@
 export default {
   mode: 'universal',
   head: {
-    title: '"ООО  СЕКВОЙЯ" Покупка вторсырья.',
+    title: '"ООО СЕКВОЙЯ" Покупка вторсырья.',
     meta: [
       {
         charset: 'utf-8'
@@ -30,7 +30,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/style/style.scss'],
+  css: ['~/assets/style/style.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -38,10 +38,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
-  ],
+  buildModules: ['@nuxtjs/eslint-module'],
   /*
    ** Nuxt.js modules
    */
@@ -61,6 +58,18 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    // extend(config, ctx) {},
+    babel: {
+      plugins: [
+        [
+          'import',
+          {
+            libraryName: 'ant-design-vue',
+            libraryDirectory: 'es',
+            style: 'css'
+          }
+        ]
+      ]
+    }
   }
 }
