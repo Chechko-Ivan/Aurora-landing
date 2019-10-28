@@ -124,15 +124,101 @@
       <Container>
         <Row :gutter="{ xs: layout.gutterMobile, md: layout.gutterDesktop }">
           <Col :span="24">
-            <h2 class="s-form-title">Договор на долгосрочное сотрудничество</h2>
+            <h2 class="s-form-title">
+              Отходы Ваши –
+              <span class="accent">товары и деньги наши</span>
+            </h2>
           </Col>
 
-          <Col :lg="{ span: 20, offset: 2 }" :span="24">
-            <form class="form">123</form>
+          <Col :lg="{ span: 16, offset: 4 }" :span="24">
+            <Form>
+              <div class="form-header">
+                <h3 class="form-title">Оставьте заявку</h3>
+                <span class="form-subtitle">
+                  Напишите нам и наш менеджер свяжется с вами в кратчайшие
+                  сроки!
+                </span>
+              </div>
+              <FormFieldRow>
+                <FormField placeholder="Представьтесь" required></FormField>
+              </FormFieldRow>
+
+              <FormFieldRow>
+                <FormField
+                  type="tel"
+                  placeholder="Контактный телефон"
+                  required
+                ></FormField>
+                <FormField
+                  type="email"
+                  placeholder="Контактный e-mail"
+                ></FormField>
+              </FormFieldRow>
+
+              <FormFieldRow>
+                <FormFieldTextarea
+                  placeholder="Сообщение"
+                  required
+                ></FormFieldTextarea>
+              </FormFieldRow>
+
+              <div class="form-action">
+                <Button type="submit">Отправить</Button>
+                <div class="form-action-message">
+                  Нажимая на кнопку я подтверждаю свое согласие с правилами
+                  сервиса и даю согласие на обработку моих персональных данных
+                </div>
+              </div>
+
+              <div class="form-contact">
+                <ActionLink scheme="tel" href="+74956404886">
+                  <Icon
+                    slot="icon"
+                    icon-name="tel"
+                    fill="#f16922"
+                    width="18"
+                    height="18"
+                  ></Icon
+                  >+7 495 640-48-86
+                </ActionLink>
+
+                <ActionLink scheme="tel" href="+74959751214">
+                  <Icon
+                    slot="icon"
+                    icon-name="tel"
+                    fill="#f16922"
+                    width="18"
+                    height="18"
+                  ></Icon
+                  >+7 495 975-12-14
+                </ActionLink>
+
+                <ActionLink scheme="mailto" href="info@avrora-td.ru">
+                  <Icon
+                    slot="icon"
+                    icon-name="mail"
+                    fill="#f16922"
+                    width="18"
+                    height="18"
+                  ></Icon
+                  >info@avrora-td.ru
+                </ActionLink>
+              </div>
+            </Form>
           </Col>
         </Row>
       </Container>
     </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-copyright">&copy; 2019 ООО «Секвойя»</div>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#">Политика обработки персональных данных</a>
+        <span class="bull">&bull;</span>
+        <a href="https://maksis.by">Разработано студией Maksis</a>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -147,6 +233,11 @@ import ActionLink from '~/components/ActionLink.vue'
 import Icon from '~/components/Icon.vue'
 import RecucleAnimation from '~/components/RecucleAnimation.vue'
 import Blank from '~/components/Blank.vue'
+import Form from '~/components/Form.vue'
+import FormField from '~/components/FormField.vue'
+import FormFieldRow from '~/components/FormFieldRow.vue'
+import FormFieldTextarea from '~/components/FormFieldTextarea.vue'
+import Button from '~/components/Button.vue'
 
 import { OFFICE_COORDINATES } from '~/assets/js/constants.js'
 
@@ -161,7 +252,12 @@ export default {
     ActionLink,
     Icon,
     RecucleAnimation,
-    Blank
+    Blank,
+    Form,
+    FormField,
+    FormFieldRow,
+    FormFieldTextarea,
+    Button
   },
 
   data() {
@@ -375,6 +471,85 @@ export default {
       margin-left: 0;
       max-width: 80px;
     }
+  }
+}
+
+.s-form {
+  padding: 40px 0 40px;
+
+  @media (max-width: 575.98px) {
+    padding: 20px 0 20px;
+  }
+}
+
+.s-form-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 80px;
+
+  @media (max-width: 991.98px) {
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+
+  @media (max-width: 767.98px) {
+    font-size: 27px;
+  }
+
+  @media (max-width: 575.98px) {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .accent {
+    color: var(--color-orange);
+  }
+}
+
+.footer {
+  padding: 40px 0 0;
+
+  @media (max-width: 991.98px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 575.98px) {
+    font-size: 12px;
+  }
+
+  a {
+    color: var(--color-from-hell);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .bull {
+    margin: 0 20px;
+    color: var(--color-orange);
+
+    @media (max-width: 991.98px) {
+      margin: 0 10px;
+    }
+  }
+}
+
+.footer-inner {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafbff;
+  text-transform: uppercase;
+
+  @media (max-width: 767.98px) {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
 }
 </style>
