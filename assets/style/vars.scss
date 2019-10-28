@@ -29,3 +29,21 @@
   --recucle-height: 470px;
   --recucle-icon-width: 40.425%;
 }
+
+// Heading
+:root {
+  --heading-color: var(--color-black);
+  --heading-font-weight: 600;
+  --heading-line-height: 1.25;
+}
+
+// Media breakpoints
+// :root {
+//   --media-breakpoint-down-xs: 575.98px;
+//   --media-breakpoint-down-md: 767.98px;
+//   --media-breakpoint-down-lg: 991.98px;
+//   --media-breakpoint-down-xl: 1199.98px;
+//   --media-breakpoint-down-osx: 1439.98px;
+//   --media-breakpoint-down-xxl: 1599.98px;
+//   --media-breakpoint-down-fhd: 1919.98px;
+// }

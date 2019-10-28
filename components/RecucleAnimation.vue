@@ -34,6 +34,20 @@ export default {
   position: relative;
   width: var(--recucle-width);
   height: var(--recucle-height);
+
+  @media (max-width: 1199.98px) {
+    --recucle-width: 270px;
+    --recucle-height: 270px;
+  }
+
+  @media (max-width: 767.98px) {
+    --recucle-width: 150px;
+    --recucle-height: 150px;
+  }
+
+  @media (max-width: 575.98px) {
+    display: none;
+  }
 }
 
 .recucle-icon {
@@ -61,6 +75,7 @@ export default {
   &:nth-of-type(2) {
     width: 76.59%;
     animation-direction: reverse;
+    animation-duration: 10s;
   }
 }
 

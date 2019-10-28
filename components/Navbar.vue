@@ -16,6 +16,19 @@ export default {
   align-items: center;
   height: 95px;
 
+  @media (max-width: 991.98px) {
+    height: 80px;
+  }
+
+  @media (max-width: 575.98px) {
+    height: auto;
+    padding: 10px 0;
+
+    .ant-row {
+      text-align: right;
+    }
+  }
+
   > div.ant-row {
     width: 100%;
   }

@@ -59,3 +59,9 @@ input::-moz-focus-inner {
 textarea {
   resize: vertical;
 }
+
+b,
+strong {
+  font-weight: 600;
+  color: var(--color-black);
+}

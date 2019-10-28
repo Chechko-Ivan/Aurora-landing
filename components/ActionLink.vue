@@ -42,7 +42,7 @@ export default {
   display: flex;
   align-items: center;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--color-white);
   line-height: 1.22;
   transition: color 0.3s ease;
