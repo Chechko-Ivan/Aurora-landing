@@ -41,3 +41,35 @@ img {
   width: 100%;
   height: auto;
 }
+
+.icon-in-circle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    180deg,
+    var(--color-light-orange) 0%,
+    var(--color-orange) 100%
+  );
+  transition: all 0.25s ease;
+
+  @media (max-width: 767.98px) {
+    width: 35px;
+    height: 35px;
+  }
+
+  &:hover {
+    background-image: linear-gradient(180deg, #ffbe52 0%, #ff8734 100%);
+    box-shadow: 0 0 2px 0 rgba(255, 163, 20, 0.5), 0 0 8px 0 #ffcf84;
+  }
+
+  svg {
+    @media (max-width: 767.98px) {
+      width: 17.5px;
+      height: 17.5px;
+    }
+  }
+}

@@ -15,20 +15,18 @@
             </Col>
 
             <Col :lg="{ span: 8, offset: 2 }" :sm="{ span: 10 }">
-              <div class="header-action-link">
-                <ActionLink
-                  :href="`http://maps.yandex.ru/?text=${OFFICE_COORDINATES}`"
-                >
-                  <Icon
-                    slot="icon"
-                    icon-name="pin"
-                    fill="#f16922"
-                    width="32"
-                    height="32"
-                  ></Icon
-                  >г. Смоленск, <br />ул.Энгельса, дом №23, офис 426
-                </ActionLink>
-              </div>
+              <ActionLink
+                :href="`http://maps.yandex.ru/?text=${OFFICE_COORDINATES}`"
+              >
+                <Icon
+                  slot="icon"
+                  icon-name="pin"
+                  fill="#f16922"
+                  width="32"
+                  height="32"
+                ></Icon
+                >г. Смоленск, <br />ул.Энгельса, дом №23, офис 426
+              </ActionLink>
             </Col>
 
             <Col :xl="{ span: 4 }" :lg="{ span: 8 }" :sm="{ span: 6 }">
@@ -87,6 +85,54 @@
         </Row>
       </Container>
     </section>
+
+    <section class="s-contract">
+      <Container>
+        <Row :gutter="{ xs: layout.gutterMobile, md: layout.gutterDesktop }">
+          <Col :span="24">
+            <h2 class="s-contract-title">
+              Договор на долгосрочное сотрудничество
+            </h2>
+          </Col>
+
+          <Col :lg="{ span: 20, offset: 2 }" :span="24">
+            <div class="s-contract-content">
+              <div class="s-contract-content-text">
+                <p>
+                  Заключая договора на долгосрочное сотрудничество, наша
+                  компания предлагает своим партнёрам конкурентоспособные цены
+                  на отходы ПВХ выше рыночных, а также приветствует работу по
+                  продвижению и реализации продукции ПВХ, производимой нашей
+                  компанией.
+                </p>
+                <p>
+                  Мы подходим к каждому клиенту индивидуально и приглашаем к
+                  долгосрочному взаимовыгодному сотрудничеству производителей
+                  дверей и окон ПВХ, а также коммерческие организации,
+                  занимающиеся скупкой и продажей отходов ПВХ.
+                </p>
+              </div>
+
+              <img src="../static/images/contract.svg" alt="icon" />
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
+    <section class="s-form">
+      <Container>
+        <Row :gutter="{ xs: layout.gutterMobile, md: layout.gutterDesktop }">
+          <Col :span="24">
+            <h2 class="s-form-title">Договор на долгосрочное сотрудничество</h2>
+          </Col>
+
+          <Col :lg="{ span: 20, offset: 2 }" :span="24">
+            <form class="form">123</form>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   </div>
 </template>
 
@@ -139,15 +185,10 @@ export default {
 
   .navbar {
     div[class*='ant-col-'] {
-      margin-bottom: 15px;
+      &:not(:last-of-type) {
+        margin-bottom: 15px;
+      }
     }
-  }
-}
-
-.header-action-link {
-  @media (max-width: 575.98px) {
-    display: flex;
-    justify-content: flex-end;
   }
 
   .action-link {
@@ -164,6 +205,10 @@ export default {
     @media (max-width: 767.98px) {
       font-size: 13px;
     }
+
+    @media (max-width: 575.98px) {
+      color: var(--color-from-hell);
+    }
   }
 
   .action-link-icon {
@@ -171,10 +216,18 @@ export default {
       margin-right: 5px;
     }
 
+    @media (max-width: 575.98px) {
+      margin-right: 0;
+    }
+
     svg {
       @media (max-width: 767.98px) {
         width: 25px;
         height: 25px;
+      }
+
+      @media (max-width: 575.98px) {
+        display: none;
       }
     }
   }
@@ -184,10 +237,18 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  width: 70%;
+  width: 68%;
+
+  @media (min-width: 1920px) {
+    width: 65%;
+  }
+
+  @media (min-width: 2350px) {
+    width: 60%;
+  }
 
   @media (max-width: 575.98px) {
-    width: 120%;
+    display: none;
   }
 }
 
@@ -202,6 +263,11 @@ export default {
 
   @media (max-width: 767.98px) {
     font-size: 13px;
+  }
+
+  @media (max-width: 575.98px) {
+    align-items: flex-start;
+    color: var(--color-from-hell);
   }
 }
 
@@ -243,6 +309,72 @@ export default {
 }
 
 .s-blank {
-  padding: 80px 0;
+  padding: 80px 0 40px;
+
+  @media (max-width: 575.98px) {
+    padding: 40px 0 20px;
+  }
+}
+
+.s-contract {
+  padding: 50px 0 40px;
+
+  @media (max-width: 575.98px) {
+    padding: 25px 0 20px;
+  }
+}
+
+.s-contract-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+
+  @media (max-width: 991.98px) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 767.98px) {
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 575.98px) {
+    text-align: left;
+    font-size: 25px;
+  }
+}
+
+.s-contract-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  p {
+    &:first-of-type {
+      padding-right: 100px;
+    }
+  }
+
+  img {
+    max-width: 160px;
+    margin-left: 40px;
+
+    @media (max-width: 991.98px) {
+      max-width: 140px;
+    }
+
+    @media (max-width: 767.98px) {
+      margin-left: 20px;
+    }
+
+    @media (max-width: 575.98px) {
+      position: absolute;
+      top: 15px;
+      right: 0;
+      margin-left: 0;
+      max-width: 80px;
+    }
+  }
 }
 </style>

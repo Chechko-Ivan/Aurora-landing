@@ -1,7 +1,15 @@
 <template>
   <div class="blank">
     <div class="blank-icon">
-      <Icon slot="icon" icon-name="info-circle" width="40" height="40"></Icon>
+      <div class="icon-in-circle">
+        <Icon
+          slot="icon"
+          icon-name="info"
+          fill="#ffffff"
+          width="20"
+          height="20"
+        ></Icon>
+      </div>
     </div>
 
     <div class="blank-inner">
@@ -29,13 +37,6 @@
 
       <span class="blank-organization-name">отходы ПВХ</span>
     </div>
-
-    <defs>
-      <linearGradient id="iconGradient" x1="50%" x2="50%" y1="0%" y2="100%">
-        <stop offset="0%" stop-color="#FF972F" />
-        <stop offset="100%" stop-color="#F16922" />
-      </linearGradient>
-    </defs>
   </div>
 </template>
 
@@ -57,6 +58,10 @@ export default {
   border-radius: 66px;
   line-height: 1.27;
   box-sizing: border-box;
+
+  @media (max-width: 991.98px) {
+    border-radius: 60px;
+  }
 }
 
 .blank-inner {
@@ -64,18 +69,50 @@ export default {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+
+  @media (max-width: 1199.98px) {
+    padding: 30px 50px;
+  }
+
+  @media (max-width: 991.98px) {
+    padding: 20px 40px;
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 20px 30px;
+  }
 }
 
 .blank-body {
   margin: 30px 0;
+
+  @media (max-width: 1199.98px) {
+    margin: 20px 0;
+  }
+
+  @media (max-width: 991.98px) {
+    margin: 15px 0;
+  }
+
+  @media (max-width: 767.98px) {
+    margin: 10px 0;
+  }
 }
 
 .blank-body-row {
   display: flex;
   align-items: center;
 
+  @media (max-width: 575.98px) {
+    flex-wrap: wrap;
+  }
+
   &:not(:last-of-type) {
     margin-bottom: 10px;
+
+    @media (max-width: 1199.98px) {
+      margin-bottom: 5px;
+    }
   }
 
   .line {
@@ -84,11 +121,19 @@ export default {
 
     margin: 0 15px;
     height: 2px;
+
+    @media (max-width: 575.98px) {
+      display: none;
+    }
   }
 
   &:first-of-type {
     .line {
       width: 270px;
+
+      @media (max-width: 1199.98px) {
+        width: 150px;
+      }
     }
   }
 
@@ -102,6 +147,19 @@ export default {
 .blank-body-title {
   font-size: 28px;
   white-space: nowrap;
+
+  @media (max-width: 1199.98px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 991.98px) {
+    font-size: 21px;
+  }
+
+  @media (max-width: 575.98px) {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
 }
 
 .blank-body-text {
@@ -118,8 +176,8 @@ export default {
   left: 0;
   transform: translate(calc(-50% - 5px), -50%);
 
-  svg {
-    fill: url('#iconGradient');
+  @media (max-width: 767.98px) {
+    padding: 20px 0;
   }
 }
 </style>

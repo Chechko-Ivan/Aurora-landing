@@ -28,10 +28,6 @@ export default {
     font-size: 22px;
   }
 
-  @media (max-width: 575.98px) {
-    color: var(--color-white);
-  }
-
   span {
     color: var(--color-orange);
     font-weight: 600;

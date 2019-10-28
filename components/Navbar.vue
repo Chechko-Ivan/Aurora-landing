@@ -23,10 +23,6 @@ export default {
   @media (max-width: 575.98px) {
     height: auto;
     padding: 10px 0;
-
-    .ant-row {
-      text-align: right;
-    }
   }
 
   > div.ant-row {

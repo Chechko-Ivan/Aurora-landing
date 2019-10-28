@@ -38,9 +38,10 @@ export default {
     },
 
     // Цвет заливки
+    // eslint-disable-next-line vue/require-default-prop
     fill: {
       type: String,
-      default: 'currentColor'
+      default: ''
     },
 
     // Цвет обводки
