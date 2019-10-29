@@ -1,5 +1,5 @@
 export default {
-  mode: 'universal',
+  mode: 'spa',
   head: {
     title: '"ООО СЕКВОЙЯ" Покупка вторсырья.',
     meta: [
@@ -34,23 +34,18 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/aos.js', ssr: false },
+    '~/plugins/antdNotification.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/eslint-module'],
+  buildModules: [],
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
-  ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {},
+  modules: [],
   /*
    ** Build configuration
    */
@@ -59,17 +54,5 @@ export default {
      ** You can extend webpack config here
      */
     // extend(config, ctx) {},
-    babel: {
-      // plugins: [
-      //   [
-      //     'import',
-      //     {
-      //       libraryName: 'ant-design-vue',
-      //       libraryDirectory: 'es',
-      //       style: 'css'
-      //     }
-      //   ]
-      // ]
-    }
   }
 }

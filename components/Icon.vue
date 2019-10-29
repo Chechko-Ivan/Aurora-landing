@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 <template>
   <svg
     :viewBox="viewBox"
@@ -94,6 +93,7 @@ export default {
     loadFile() {
       this.getSvgIconText()
         .then((responseText) => (this.svgString = responseText))
+        // eslint-disable-next-line no-console
         .catch((error) => console.error('Ошибка загрузки SVG-файла', error))
     },
 
@@ -133,6 +133,7 @@ export default {
         .then((svgHtml) => (this.$el.innerHTML = svgHtml))
         .then(() => this.generateReadyEvent && this.$emit('ready'))
         .catch((error) => {
+          // eslint-disable-next-line no-console
           console.error('Ошибка при обновлении SVG', error)
           this.$emit('error', error)
         })

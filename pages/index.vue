@@ -7,15 +7,19 @@
           alt="shape"
           aria-hidden="true"
           class="header-shape"
+          data-aos="fade"
+          data-aos-delay="600"
         />
         <Navbar>
           <Row :gutter="{ xs: layout.gutterMobile, md: layout.gutterDesktop }">
             <Col :xl="{ offset: 2 }" :lg="{ span: 6 }" :sm="{ span: 8 }">
-              <Logo></Logo>
+              <Logo data-aos="zoom-out" data-aos-delay="600"></Logo>
             </Col>
 
             <Col :lg="{ span: 8, offset: 2 }" :sm="{ span: 10 }">
               <ActionLink
+                data-aos="zoom-out"
+                data-aos-delay="800"
                 :href="`http://maps.yandex.ru/?text=${OFFICE_COORDINATES}`"
               >
                 <Icon
@@ -30,7 +34,11 @@
             </Col>
 
             <Col :xl="{ span: 4 }" :lg="{ span: 8 }" :sm="{ span: 6 }">
-              <div class="header-info">
+              <div
+                class="header-info"
+                data-aos="zoom-out"
+                data-aos-delay="1000"
+              >
                 <span class="header-info-work-time">с 9:00 до 21:00</span>
                 <ActionLink href="+74956404886" scheme="tel"
                   >+7 495 640-48-86</ActionLink
@@ -50,12 +58,12 @@
             :lg="{ span: 14 }"
             :sm="{ span: 16 }"
           >
-            <h1 class="main-title">
+            <h1 class="main-title" data-aos="zoom-out" data-aos-delay="200">
               Покупаем отходы ПВХ
               <br />на постоянной основе
             </h1>
 
-            <div class="main-text">
+            <div class="main-text" data-aos="zoom-out" data-aos-delay="1300">
               <p>
                 Мы подходим к каждому клиенту индивидуально и приглашаем к
                 долгосрочному взаимовыгодному сотрудничеству производителей
@@ -65,12 +73,15 @@
             </div>
           </Col>
           <Col
+            class="main-recucle-animation"
             :lg="{ span: 10 }"
             :md="{ span: 12 }"
             :sm="{ span: 8 }"
-            class="main-recucle-animation"
           >
-            <RecucleAnimation></RecucleAnimation>
+            <RecucleAnimation
+              data-aos="zoom-out"
+              data-aos-delay="1500"
+            ></RecucleAnimation>
           </Col>
         </Row>
       </Container>
@@ -80,7 +91,11 @@
       <Container>
         <Row :gutter="{ xs: layout.gutterMobile, md: layout.gutterDesktop }">
           <Col :lg="{ span: 20, offset: 2 }">
-            <Blank></Blank>
+            <Blank
+              data-aos="fade"
+              data-aos-offset="300"
+              data-aos-delay="200"
+            ></Blank>
           </Col>
         </Row>
       </Container>
@@ -90,14 +105,18 @@
       <Container>
         <Row :gutter="{ xs: layout.gutterMobile, md: layout.gutterDesktop }">
           <Col :span="24">
-            <h2 class="s-contract-title">
+            <h2 class="s-contract-title" data-aos="fade" data-aos-delay="200">
               Договор на долгосрочное сотрудничество
             </h2>
           </Col>
 
           <Col :lg="{ span: 20, offset: 2 }" :span="24">
             <div class="s-contract-content">
-              <div class="s-contract-content-text">
+              <div
+                class="s-contract-content-text"
+                data-aos="fade"
+                data-aos-delay="200"
+              >
                 <p>
                   Заключая договора на долгосрочное сотрудничество, наша
                   компания предлагает своим партнёрам конкурентоспособные цены
@@ -113,7 +132,12 @@
                 </p>
               </div>
 
-              <img src="../static/images/contract.svg" alt="icon" />
+              <img
+                src="../static/images/contract.svg"
+                alt="icon"
+                data-aos="zoom-out"
+                data-aos-delay="200"
+              />
             </div>
           </Col>
         </Row>
@@ -124,14 +148,20 @@
       <Container>
         <Row :gutter="{ xs: layout.gutterMobile, md: layout.gutterDesktop }">
           <Col :span="24">
-            <h2 class="s-form-title">
+            <h2 class="s-form-title" data-aos="fade" data-aos-delay="200">
               Отходы Ваши –
-              <span class="accent">товары и деньги наши</span>
+              <span class="accent" data-aos="fade" data-aos-delay="450"
+                >товары и деньги наши</span
+              >
             </h2>
           </Col>
 
           <Col :lg="{ span: 16, offset: 4 }" :span="24">
-            <Form>
+            <Form
+              data-aos="zoom-out"
+              data-aos-delay="200"
+              data-aos-offset="150"
+            >
               <div class="form-header">
                 <h3 class="form-title">Оставьте заявку</h3>
                 <span class="form-subtitle">
@@ -140,30 +170,38 @@
                 </span>
               </div>
               <FormFieldRow>
-                <FormField placeholder="Представьтесь" required></FormField>
+                <FormField
+                  placeholder="* Представьтесь"
+                  :error="name.error"
+                  @update="(e) => (name.value = e)"
+                ></FormField>
               </FormFieldRow>
 
               <FormFieldRow>
                 <FormField
                   type="tel"
-                  placeholder="Контактный телефон"
-                  required
+                  placeholder="* Контактный телефон"
+                  :error="phone.error"
+                  @update="(e) => (phone.value = e)"
                 ></FormField>
                 <FormField
                   type="email"
                   placeholder="Контактный e-mail"
+                  :error="email.error"
+                  @update="(e) => (email.value = e)"
                 ></FormField>
               </FormFieldRow>
 
               <FormFieldRow>
                 <FormFieldTextarea
-                  placeholder="Сообщение"
-                  required
+                  placeholder="* Сообщение"
+                  :error="message.error"
+                  @update="(e) => (message.value = e)"
                 ></FormFieldTextarea>
               </FormFieldRow>
 
               <div class="form-action">
-                <Button type="submit">Отправить</Button>
+                <Button type="submit" @click.prevent="send">Отправить</Button>
                 <div class="form-action-message">
                   Нажимая на кнопку я подтверждаю свое согласие с правилами
                   сервиса и даю согласие на обработку моих персональных данных
@@ -212,11 +250,26 @@
 
     <footer class="footer">
       <div class="footer-inner">
-        <div class="footer-copyright">&copy; 2019 ООО «Секвойя»</div>
+        <div
+          class="footer-copyright"
+          data-aos="fade"
+          data-aos-delay="100"
+          data-aos-offset="0"
+        >
+          &copy; 2019 ООО «Секвойя»
+        </div>
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="#">Политика обработки персональных данных</a>
+        <a href="#" data-aos="fade" data-aos-delay="200" data-aos-offset="0"
+          >Политика обработки персональных данных</a
+        >
         <span class="bull">&bull;</span>
-        <a href="https://maksis.by">Разработано студией Maksis</a>
+        <a
+          href="https://maksis.by"
+          data-aos="fade"
+          data-aos-delay="300"
+          data-aos-offset="0"
+          >Разработано студией Maksis</a
+        >
       </div>
     </footer>
   </div>
@@ -240,6 +293,7 @@ import FormFieldTextarea from '~/components/FormFieldTextarea.vue'
 import Button from '~/components/Button.vue'
 
 import { OFFICE_COORDINATES } from '~/assets/js/constants.js'
+import validateEmail from '~/assets/js/validateEmail.js'
 
 export default {
   components: {
@@ -262,15 +316,107 @@ export default {
 
   data() {
     return {
+      OFFICE_COORDINATES,
       layout: {
         gutterDesktop: 20,
         gutterMobile: 10
       },
-      OFFICE_COORDINATES
+      name: { value: '', error: null },
+      phone: { value: '', error: null },
+      email: { value: '', error: null },
+      message: { value: '', error: null }
     }
   },
 
-  methods: {}
+  methods: {
+    validate() {
+      const errors = {}
+      const { name, phone, email, message } = this
+
+      // Reset old erorors
+      name.error = null
+      phone.error = null
+      email.error = null
+      message.error = null
+
+      if (!name.value) {
+        errors.name = true
+      }
+
+      if (!phone.value) {
+        errors.phone = true
+      }
+
+      if (!message.value) {
+        errors.message = true
+      }
+
+      if (email.value && !validateEmail(email.value)) {
+        errors.email = true
+      }
+
+      if (!Object.keys(errors).length) {
+        return true
+      }
+
+      name.error = errors.name
+      phone.error = errors.phone
+      email.error = errors.email
+      message.error = errors.message
+    },
+
+    send() {
+      if (this.validate()) {
+        const { name, phone, email, message } = this
+
+        const body = new FormData()
+        body.append('name', name)
+        body.append('phone', phone)
+        body.append('email', email)
+        body.append('message', message)
+
+        const options = {
+          method: 'POST',
+          body
+        }
+
+        fetch('./mail.php', options)
+          .then((data) => {
+            return data.json()
+          })
+          .then((res) => {
+            if (res.success) {
+              this.$notification.open({
+                class: 'custome-ant-notification',
+                message: 'ООО СЕКВОЙЯ',
+                duration: 7,
+                description: res.success
+              })
+
+              this.name = ''
+              this.phone = ''
+              this.email = ''
+              this.message = ''
+            } else {
+              this.$notification.open({
+                class: 'custome-ant-notification',
+                message: 'ООО СЕКВОЙЯ',
+                duration: 7,
+                description: res.error
+              })
+            }
+          })
+      } else {
+        this.$notification.open({
+          class: 'custome-ant-notification',
+          message: 'ООО СЕКВОЙЯ',
+          duration: 7,
+          description:
+            'Проверьте правильность введенных данных и попробуйте еще раз.'
+        })
+      }
+    }
+  }
 }
 </script>
 

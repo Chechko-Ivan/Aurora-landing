@@ -48,7 +48,7 @@ export default {
   transition: color 0.3s ease;
 
   &:hover {
-    color: rgba(#ffffff, 0.8);
+    color: rgba(#ffffff, 0.65);
   }
 }
 

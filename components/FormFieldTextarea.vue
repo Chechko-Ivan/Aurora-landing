@@ -1,6 +1,6 @@
 <template>
   <textarea
-    class="form-field-textarea"
+    :class="['form-field-textarea', { error: error }]"
     v-bind="$attrs"
     v-on="$listeners"
     @input="$emit('update', $event.target.value)"
@@ -10,7 +10,13 @@
 <script>
 export default {
   name: 'FormFieldTextarea',
-  inheritAttrs: false
+  inheritAttrs: false,
+  props: {
+    error: {
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>
 
@@ -34,6 +40,10 @@ export default {
 
   &:focus {
     box-shadow: inset 0 3px 2px 0 rgba(9, 20, 60, 0.25);
+  }
+
+  &.error {
+    border: 1px solid #e6491a;
   }
 }
 </style>

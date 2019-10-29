@@ -73,3 +73,22 @@ img {
     }
   }
 }
+
+.ant-notification {
+  max-width: calc(100vw - 30px) !important;
+  margin-right: 15px !important;
+}
+
+.custome-ant-notification {
+  .ant-notification-notice-message {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .ant-notification-notice-description {
+    font-size: 16px;
+    line-height: var(--line-height);
+    color: var(--text-color);
+    font-family: var(--font-family);
+  }
+}

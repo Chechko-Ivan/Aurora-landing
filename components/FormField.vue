@@ -1,6 +1,6 @@
 <template>
   <input
-    class="form-field"
+    :class="['form-field', { error: error }]"
     :type="type"
     v-bind="$attrs"
     v-on="$listeners"
@@ -19,6 +19,10 @@ export default {
       validator(value) {
         return ['email', 'number', 'tel', 'text', 'url'].includes(value)
       }
+    },
+    error: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -47,6 +51,10 @@ export default {
 
   &:not(:last-of-type) {
     margin-right: 20px;
+  }
+
+  &.error {
+    border: 1px solid #e6491a;
   }
 }
 </style>
