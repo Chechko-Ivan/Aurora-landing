@@ -43,7 +43,7 @@ export default {
   }
 
   &.error {
-    border: 1px solid #e6491a;
+    border: 2px solid #f85352;
   }
 }
 </style>
