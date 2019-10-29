@@ -120,6 +120,7 @@
     </section>
 
     <section class="s-contract">
+      <img src="~/static/images/shape2.svg" alt="shape" aria-hidden="true" class="s-contract-shape" />
       <Container>
         <Row :gutter="{ xs: layout.gutterMobile, md: layout.gutterDesktop }">
           <Col :span="24">
@@ -634,10 +635,36 @@ export default {
 }
 
 .s-contract {
+  position: relative;
   padding: 50px 0 40px;
 
   @media (max-width: 575.98px) {
     padding: 25px 0 20px;
+  }
+}
+
+.s-contract-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 290px;
+  transform: translateY(-50%);
+  z-index: -1;
+
+  @media (max-width: 1439.98px) {
+    width: 200px;
+  }
+
+  @media (max-width: 1199.98px) {
+    width: 120px;
+  }
+
+  @media (max-width: 991.98px) {
+    width: 90px;
+  }
+
+  @media (max-width: 767.98px) {
+    display: none;
   }
 }
 
