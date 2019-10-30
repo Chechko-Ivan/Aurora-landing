@@ -1,9 +1,11 @@
 export default {
   mode: 'spa',
   head: {
-    title: '"ООО СЕКВОЙЯ" Покупка вторсырья.',
+    title:
+      'ООО "Секвойя" | Закупка и переработка отходов ПВХ на постоянной основе',
     htmlAttrs: {
-      lang: 'ru'
+      lang: 'ru',
+      prefix: 'og: http://ogp.me/ns#'
     },
     meta: [
       {
@@ -16,7 +18,26 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          'Отходы ПВХ оконного профиля. Однослойная мебельная пленка. Подоконник ПВХ. Штапик ПВХ'
+      },
+      {
+        property: 'og:site_name',
+        content: 'Отходы ПВХ'
+      },
+      {
+        property: 'og:title',
+        content:
+          'ООО "Секвойя" | Закупка и переработка отходов ПВХ на постоянной основе'
+      },
+      {
+        property: 'og:image',
+        content: 'https://othodi-pvh.ru/favicon/apple-touch-icon.png'
+      },
+      {
+        property: 'og:description',
+        content:
+          'Отходы ПВХ оконного профиля. Однослойная мебельная пленка. Подоконник ПВХ. Штапик ПВХ'
       }
     ],
     link: [
