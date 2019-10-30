@@ -1,13 +1,19 @@
 <template>
   <div class="waste-circle">
     <div class="waste-circle-image">
-      <img
+      <!-- <img
         src="~/static/images/waste.png"
         role="presentation"
         alt="waste"
         data-aos="zoom-in"
         data-aos-delay="200"
-      />
+      />-->
+
+      <picture data-aos="zoom-in" data-aos-delay="200">
+        <source srcset="~/static/images/waste.webp" type="image/webp" />
+        <source srcset="~/static/images/waste.png" type="image/png" />
+        <img src="~/static/images/waste.png" alt="Waste" />
+      </picture>
     </div>
   </div>
 </template>
