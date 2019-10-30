@@ -1,5 +1,6 @@
 export default {
   mode: 'spa',
+  generate: { fallback: true },
   head: {
     title:
       'ООО "Секвойя" | Закупка и переработка отходов ПВХ на постоянной основе',
