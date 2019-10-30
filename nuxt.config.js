@@ -2,6 +2,9 @@ export default {
   mode: 'spa',
   head: {
     title: '"ООО СЕКВОЙЯ" Покупка вторсырья.',
+    htmlAttrs: {
+      lang: 'ru'
+    },
     meta: [
       {
         charset: 'utf-8'
@@ -69,5 +72,30 @@ export default {
      ** You can extend webpack config here
      */
     // extend(config, ctx) {},
+    babel: {
+      // presets({ isServer }) {
+      //   return [
+      //     [
+      //       '@nuxt/babel-preset-app',
+      //       {
+      //         targets: isServer
+      //           ? { node: 'current' }
+      //           : {
+      //               browsers: [
+      //                 'last 2 versions',
+      //                 'not ie 11',
+      //                 'not dead',
+      //                 'not ie_mob 11',
+      //                 'not op_mini all',
+      //                 'not op_mob > 0',
+      //                 'not and_qq > 0',
+      //                 'not android > 0'
+      //               ]
+      //             }
+      //       }
+      //     ]
+      //   ]
+      // }
+    }
   }
 }
