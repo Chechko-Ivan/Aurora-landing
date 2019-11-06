@@ -22,15 +22,33 @@
                 data-aos-delay="800"
                 :href="`http://maps.yandex.ru/?text=${OFFICE_COORDINATES}`"
               >
-                <Icon slot="icon" icon-name="pin" fill="#f16922" width="32" height="32"></Icon>г. Смоленск,
-                <br />ул.Энгельса, дом №23, офис 426
+                <Icon
+                  slot="icon"
+                  icon-name="pin"
+                  fill="#f16922"
+                  width="32"
+                  height="32"
+                ></Icon
+                >г. Смоленск, <br />ул.Энгельса, дом №23, офис 426
               </ActionLink>
             </Col>
 
             <Col :xl="{ span: 4 }" :lg="{ span: 8 }" :sm="{ span: 6 }">
-              <div class="header-info" data-aos="zoom-out" data-aos-delay="1000">
+              <div
+                class="header-info"
+                data-aos="zoom-out"
+                data-aos-delay="1000"
+              >
                 <span class="header-info-work-time">с 9:00 до 21:00</span>
-                <ActionLink href="+74956404886" scheme="tel">+7 495 640-48-86</ActionLink>
+                <ActionLink href="+74956404886" scheme="tel"
+                  >+7 495 640-48-86</ActionLink
+                >
+                <ActionLink href="+74959751214" scheme="tel"
+                  >+7 495 975-12-14</ActionLink
+                >
+                <ActionLink href="+79206616576" scheme="tel"
+                  >+7 920 661-65-76</ActionLink
+                >
               </div>
             </Col>
           </Row>
@@ -41,7 +59,11 @@
     <main class="main">
       <Container>
         <Row type="flex" align="middle" :gutter="layout.gutter">
-          <Col :xl="{ span: 10, offset: 2 }" :lg="{ span: 14 }" :sm="{ span: 16 }">
+          <Col
+            :xl="{ span: 10, offset: 2 }"
+            :lg="{ span: 14 }"
+            :sm="{ span: 16 }"
+          >
             <h1 class="main-title" data-aos="zoom-out" data-aos-delay="200">
               Покупаем отходы ПВХ
               <br />на постоянной основе
@@ -62,7 +84,10 @@
             :md="{ span: 12 }"
             :sm="{ span: 8 }"
           >
-            <RecucleAnimation data-aos="zoom-out" data-aos-delay="1500"></RecucleAnimation>
+            <RecucleAnimation
+              data-aos="zoom-out"
+              data-aos-delay="1500"
+            ></RecucleAnimation>
           </Col>
         </Row>
       </Container>
@@ -72,7 +97,11 @@
       <Container>
         <Row :gutter="{ xs: layout.gutterMobile, md: layout.gutterDesktop }">
           <Col :lg="{ span: 20, offset: 2 }">
-            <Blank data-aos="fade" data-aos-offset="300" data-aos-delay="200"></Blank>
+            <Blank
+              data-aos="fade"
+              data-aos-offset="300"
+              data-aos-delay="200"
+            ></Blank>
           </Col>
         </Row>
       </Container>
@@ -82,35 +111,45 @@
       <Container>
         <Row :gutter="{ xs: layout.gutterMobile, md: layout.gutterDesktop }">
           <Col :span="24">
-            <h2 class="s-contract-title" data-aos="fade" data-aos-delay="200">Виды отходов</h2>
+            <h2 class="s-contract-title" data-aos="fade" data-aos-delay="200">
+              Виды отходов
+            </h2>
           </Col>
 
           <Col :xl="{ span: 20, offset: 2 }" :span="24">
             <div class="s-types-waste-content">
               <WasteItem data-aos="fade" data-aos-delay="200">
-                <template slot="title">Отходы ПВХ оконного профиля</template>
-                <template slot="desc">белого, цветного, ламинированного, с впаянной резинкой</template>
+                <template slot="title"
+                  >Отходы ПВХ оконного профиля</template
+                >
+                <template slot="desc"
+                  >белого, цветного, ламинированного, с впаянной
+                  резинкой</template
+                >
               </WasteItem>
               <WasteItem data-aos="fade" data-aos-delay="400">
-                <template slot="title">Подоконник</template>
+                <template slot="title"
+                  >Подоконник</template
+                >
                 <template slot="desc">
-                  белого, цветного, ламинированного, с впаянной
-                  резинкой
+                  белого, цветного, ламинированного, с впаянной резинкой
                 </template>
               </WasteItem>
               <WasteCircle></WasteCircle>
               <WasteItem data-aos="fade" data-aos-delay="200">
-                <template slot="title">Однослойная мебельная пленка</template>
+                <template slot="title"
+                  >Однослойная мебельная пленка</template
+                >
                 <template slot="desc">
-                  белого, цветного, ламинированного, с впаянной
-                  резинкой
+                  белого, цветного, ламинированного, с впаянной резинкой
                 </template>
               </WasteItem>
               <WasteItem data-aos="fade" data-aos-delay="400">
-                <template slot="title">Штапик</template>
+                <template slot="title"
+                  >Штапик</template
+                >
                 <template slot="desc">
-                  белого, цветного, ламинированного, с впаянной
-                  резинкой
+                  белого, цветного, ламинированного, с впаянной резинкой
                 </template>
               </WasteItem>
             </div>
@@ -120,20 +159,27 @@
     </section>
 
     <section class="s-contract">
-      <img src="~/static/images/shape2.svg" alt="shape" aria-hidden="true" class="s-contract-shape" />
+      <img
+        src="~/static/images/shape2.svg"
+        alt="shape"
+        aria-hidden="true"
+        class="s-contract-shape"
+      />
       <Container>
         <Row :gutter="{ xs: layout.gutterMobile, md: layout.gutterDesktop }">
           <Col :span="24">
-            <h2
-              class="s-contract-title"
-              data-aos="fade"
-              data-aos-delay="200"
-            >Договор на долгосрочное сотрудничество</h2>
+            <h2 class="s-contract-title" data-aos="fade" data-aos-delay="200">
+              Договор на долгосрочное сотрудничество
+            </h2>
           </Col>
 
           <Col :lg="{ span: 20, offset: 2 }" :span="24">
             <div class="s-contract-content">
-              <div class="s-contract-content-text" data-aos="fade" data-aos-delay="200">
+              <div
+                class="s-contract-content-text"
+                data-aos="fade"
+                data-aos-delay="200"
+              >
                 <p>
                   Заключая договора на долгосрочное сотрудничество, наша
                   компания предлагает своим партнёрам конкурентоспособные цены
@@ -167,16 +213,18 @@
           <Col :span="24">
             <h2 class="s-form-title" data-aos="fade" data-aos-delay="200">
               Отходы Ваши –
-              <span
-                class="accent"
-                data-aos="fade"
-                data-aos-delay="450"
-              >товары и деньги наши</span>
+              <span class="accent" data-aos="fade" data-aos-delay="450"
+                >товары и деньги наши</span
+              >
             </h2>
           </Col>
 
           <Col :lg="{ span: 16, offset: 4 }" :span="24">
-            <Form data-aos="zoom-out" data-aos-delay="200" data-aos-offset="150">
+            <Form
+              data-aos="zoom-out"
+              data-aos-delay="200"
+              data-aos-offset="150"
+            >
               <div class="form-header">
                 <h3 class="form-title">Оставьте заявку</h3>
                 <span class="form-subtitle">
@@ -225,15 +273,47 @@
 
               <div class="form-contact">
                 <ActionLink scheme="tel" href="+74956404886">
-                  <Icon slot="icon" icon-name="tel" fill="#f16922" width="18" height="18"></Icon>+7 495 640-48-86
+                  <Icon
+                    slot="icon"
+                    icon-name="tel"
+                    fill="#f16922"
+                    width="18"
+                    height="18"
+                  ></Icon
+                  >+7 495 640-48-86
                 </ActionLink>
 
                 <ActionLink scheme="tel" href="+74959751214">
-                  <Icon slot="icon" icon-name="tel" fill="#f16922" width="18" height="18"></Icon>+7 495 975-12-14
+                  <Icon
+                    slot="icon"
+                    icon-name="tel"
+                    fill="#f16922"
+                    width="18"
+                    height="18"
+                  ></Icon
+                  >+7 495 975-12-14
                 </ActionLink>
 
-                <ActionLink scheme="mailto" href="info@avrora-td.ru">
-                  <Icon slot="icon" icon-name="mail" fill="#f16922" width="18" height="18"></Icon>info@avrora-td.ru
+                <ActionLink scheme="tel" href="+79206616576">
+                  <Icon
+                    slot="icon"
+                    icon-name="tel"
+                    fill="#f16922"
+                    width="18"
+                    height="18"
+                  ></Icon
+                  >+7 920 661-65-76
+                </ActionLink>
+
+                <ActionLink scheme="mailto" href="info@othodi-pvh.ru">
+                  <Icon
+                    slot="icon"
+                    icon-name="mail"
+                    fill="#f16922"
+                    width="18"
+                    height="18"
+                  ></Icon
+                  >info@othodi-pvh.ru
                 </ActionLink>
               </div>
             </Form>
@@ -249,20 +329,21 @@
           data-aos="fade"
           data-aos-delay="100"
           data-aos-offset="0"
-        >&copy; 2019 ООО «Секвойя»</div>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a
-          href="#"
-          data-aos="fade"
-          data-aos-delay="200"
-          data-aos-offset="0"
-        >Политика обработки персональных данных</a>
+        >
+          &copy; 2019 ООО «Секвойя»
+        </div>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#" data-aos="fade" data-aos-delay="200" data-aos-offset="0"
+          >Политика обработки персональных данных</a
+        >
         <span class="bull">&bull;</span>
         <a
           href="https://maksis.by"
           data-aos="fade"
           data-aos-delay="300"
           data-aos-offset="0"
-        >Разработано студией Maksis</a>
+          >Разработано студией Maksis</a
+        >
       </div>
     </footer>
   </div>
@@ -432,6 +513,12 @@ export default {
 
   .action-link {
     font-size: 18px;
+
+    &:hover {
+      @media (max-width: 767.98px) {
+        color: var(--color-from-hell) !important;
+      }
+    }
 
     @media (max-width: 1199.98px) {
       font-size: 16px;
@@ -723,10 +810,10 @@ export default {
 }
 
 .s-form {
-  padding: 40px 0 40px;
+  padding: 40px 0 25px 0;
 
   @media (max-width: 575.98px) {
-    padding: 20px 0 20px;
+    padding: 20px 0 0 0;
   }
 }
 
@@ -752,6 +839,12 @@ export default {
 
   .accent {
     color: var(--color-orange);
+  }
+}
+
+.form-contact {
+  .action-link {
+    margin-bottom: 15px;
   }
 }
 
