@@ -2,21 +2,27 @@
   <div class="blank">
     <div class="blank-icon">
       <div class="icon-in-circle">
-        <Icon
-          slot="icon"
-          icon-name="info"
-          fill="#ffffff"
-          width="20"
-          height="20"
-        ></Icon>
+        <Icon slot="icon" icon-name="info" fill="#ffffff" width="20" height="20"></Icon>
       </div>
     </div>
 
     <div class="blank-inner">
-      <span class="blank-organization-name">ООО Секвойя</span>
+      <h2 class="blank-organization-name">ООО "Секвойя" закупает отходы ПВХ</h2>
 
       <div class="blank-body">
-        <div class="blank-body-row">
+        <div class="blank-item">
+          <a href="./serf/lic1.pdf" target="_blank">Лицензия №00064</a>
+          выдана Федеральной службой по надзору в сфере природопользования
+        </div>
+        <div class="blank-item">
+          <a href="./serf/lic2.pdf" target="_blank">Лицензия №00064</a>
+          выдана Федеральной службой по надзору в сфере природопользования
+        </div>
+        <div class="blank-item">
+          <a href="./serf/lic3.pdf" target="_blank">Лицензия №00064</a>
+          выдана Федеральной службой по надзору в сфере природопользования
+        </div>
+        <!-- <div class="blank-body-row">
           <span class="blank-body-title">Закупает</span>
           <span class="line"></span>
           <span class="blank-body-text">
@@ -32,10 +38,10 @@
             <b>лицензии № 02120/1517,</b> выданной Министерством природных
             ресурсов и охраны окружающей среды Республики Беларусь
           </span>
-        </div>
+        </div>-->
       </div>
 
-      <span class="blank-organization-name">отходы ПВХ</span>
+      <!-- <span class="blank-organization-name">отходы ПВХ</span> -->
     </div>
   </div>
 </template>
@@ -64,11 +70,20 @@ export default {
   }
 }
 
+.blank-organization-name {
+  text-align: center;
+
+  @media (max-width: 575.98px) {
+    margin-bottom: 30px;
+  }
+}
+
 .blank-inner {
   padding: 50px 70px;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  text-align: center;
 
   @media (max-width: 1199.98px) {
     padding: 30px 50px;
@@ -80,11 +95,12 @@ export default {
 
   @media (max-width: 575.98px) {
     padding: 20px 30px;
+    text-align: left;
   }
 }
 
 .blank-body {
-  margin: 30px 0;
+  margin: 30px 0 0;
 
   @media (max-width: 1199.98px) {
     margin: 20px 0;
@@ -99,7 +115,37 @@ export default {
   }
 }
 
-.blank-body-row {
+.blank-item {
+  font-size: 20px;
+
+  @media (max-width: 991.98px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 575.98px) {
+    font-size: 16px;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+
+  a {
+    color: #000000;
+    font-weight: 600;
+    margin-right: 10px;
+
+    @media (max-width: 575.98px) {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: var(--color-light-orange);
+    }
+  }
+}
+
+/* .blank-body-row {
   display: flex;
   align-items: center;
 
@@ -164,7 +210,7 @@ export default {
 
 .blank-body-text {
   font-size: 14px;
-}
+} */
 
 .blank-icon {
   padding: 35px 0;

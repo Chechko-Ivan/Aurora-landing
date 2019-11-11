@@ -119,38 +119,43 @@
           <Col :xl="{ span: 20, offset: 2 }" :span="24">
             <div class="s-types-waste-content">
               <WasteItem data-aos="fade" data-aos-delay="200">
-                <template slot="title"
-                  >Отходы ПВХ оконного профиля</template
-                >
-                <template slot="desc"
-                  >белого, цветного, ламинированного, с впаянной
-                  резинкой</template
-                >
-              </WasteItem>
-              <WasteItem data-aos="fade" data-aos-delay="400">
-                <template slot="title"
-                  >Подоконник</template
-                >
-                <template slot="desc">
-                  белого, цветного, ламинированного, с впаянной резинкой
+                <template slot="title">
+                  Обрезки оконного профиля ПВХ белого, цветного, с
+                  интегрированной резинкой TPE и EPDM
                 </template>
               </WasteItem>
+
+              <WasteItem data-aos="fade" data-aos-delay="400">
+                <template slot="title"
+                  >Штапик оконный с резинкой TPE и EPDM и без</template
+                >
+              </WasteItem>
+
+              <WasteItem data-aos="fade" data-aos-delay="400">
+                <template slot="title"
+                  >Дробленка оконного профиля, панели, вагонки, сайдинга
+                  ПВХ</template
+                >
+              </WasteItem>
+
               <WasteCircle></WasteCircle>
+
               <WasteItem data-aos="fade" data-aos-delay="200">
                 <template slot="title"
-                  >Однослойная мебельная пленка</template
+                  >Подоконник ПВХ, кроме ДПК</template
                 >
-                <template slot="desc">
-                  белого, цветного, ламинированного, с впаянной резинкой
-                </template>
               </WasteItem>
+
               <WasteItem data-aos="fade" data-aos-delay="400">
                 <template slot="title"
-                  >Штапик</template
+                  >Мебельная пленка ПВХ однослойная</template
                 >
-                <template slot="desc">
-                  белого, цветного, ламинированного, с впаянной резинкой
-                </template>
+              </WasteItem>
+
+              <WasteItem data-aos="fade" data-aos-delay="400">
+                <template slot="title"
+                  >Литники ПВХ</template
+                >
               </WasteItem>
             </div>
           </Col>
@@ -675,7 +680,7 @@ export default {
       left: 45px;
 
       @media (max-width: 1439.98px) {
-        top: 0px;
+        top: 20px;
       }
 
       @media (max-width: 991.98px) {
@@ -689,8 +694,25 @@ export default {
     }
 
     &:nth-child(2) {
-      top: 120px;
-      right: 0px;
+      top: 200px;
+      left: 0px;
+
+      @media (max-width: 1439.98px) {
+        top: 145px;
+      }
+
+      @media (max-width: 991.98px) {
+        top: 175px;
+      }
+
+      .waste-item-inner {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &:nth-child(3) {
+      top: 50px;
+      right: 20px;
 
       @media (max-width: 1439.98px) {
         top: 55px;
@@ -701,12 +723,12 @@ export default {
       }
     }
 
-    &:nth-child(4) {
+    &:nth-child(5) {
       bottom: 55px;
       left: 0px;
 
       @media (max-width: 991.98px) {
-        bottom: 20px;
+        bottom: 55px;
       }
 
       .waste-item-inner {
@@ -714,9 +736,18 @@ export default {
       }
     }
 
-    &:nth-child(5) {
-      bottom: 0px;
+    &:nth-child(6) {
+      bottom: 40px;
       right: 0px;
+    }
+
+    &:nth-child(7) {
+      bottom: 185px;
+      right: 0px;
+
+      @media (max-width: 1439.98px) {
+        bottom: 150px;
+      }
     }
   }
 }

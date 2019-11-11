@@ -3,16 +3,22 @@
     <div class="waste-item-inner">
       <div class="wast-item-icon">
         <div class="icon-in-circle">
-          <Icon slot="icon" icon-name="plus" fill="#ffffff" width="20" height="20"></Icon>
+          <Icon
+            slot="icon"
+            icon-name="plus"
+            fill="#ffffff"
+            width="20"
+            height="20"
+          ></Icon>
         </div>
       </div>
       <div class="waste-item-content">
         <h3 class="waste-item-title">
           <slot name="title"></slot>
         </h3>
-        <span class="waste-item-desc">
+        <!-- <span class="waste-item-desc">
           <slot name="desc"></slot>
-        </span>
+        </span>-->
       </div>
     </div>
   </div>
@@ -32,7 +38,8 @@ export default {
 <style lang="scss" scoped>
 .waste-item {
   position: absolute;
-  max-width: 350px;
+  max-width: 320px;
+  width: 100%;
   cursor: default;
 
   @media (max-width: 1439.98px) {
@@ -40,7 +47,7 @@ export default {
   }
 
   @media (max-width: 991.98px) {
-    max-width: 270px;
+    max-width: 230px;
   }
 
   @media (max-width: 767.98px) {
@@ -79,7 +86,7 @@ export default {
 }
 
 .waste-item-title {
-  font-size: 20px;
+  font-size: 19px;
   margin-bottom: 15px;
 
   @media (max-width: 1439.98px) {
@@ -88,9 +95,9 @@ export default {
   }
 }
 
-.waste-item-desc {
+/* .waste-item-desc {
   @media (max-width: 1439.98px) {
     font-size: 15px;
   }
-}
+} */
 </style>
