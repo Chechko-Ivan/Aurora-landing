@@ -132,10 +132,9 @@
               </WasteItem>
 
               <WasteItem data-aos="fade" data-aos-delay="400">
-                <template slot="title"
-                  >Дробленка оконного профиля, панели, вагонки, сайдинга
-                  ПВХ</template
-                >
+                <template slot="title">
+                  Дробленка оконного профиля, панели, вагонки, сайдинга ПВХ
+                </template>
               </WasteItem>
 
               <WasteCircle></WasteCircle>
@@ -453,10 +452,10 @@ export default {
         const { name, phone, email, message } = this
 
         const body = new FormData()
-        body.append('name', name)
-        body.append('phone', phone)
-        body.append('email', email)
-        body.append('message', message)
+        body.append('name', name.value)
+        body.append('phone', phone.value)
+        body.append('email', email.value)
+        body.append('message', message.value)
 
         const options = {
           method: 'POST',
@@ -476,10 +475,10 @@ export default {
                 description: res.success
               })
 
-              this.name = ''
-              this.phone = ''
-              this.email = ''
-              this.message = ''
+              this.name.value = ''
+              this.phone.value = ''
+              this.email.value = ''
+              this.message.value = ''
             } else {
               this.$notification.open({
                 class: 'custome-ant-notification',

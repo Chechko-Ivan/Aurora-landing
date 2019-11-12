@@ -2,7 +2,13 @@
   <div class="blank">
     <div class="blank-icon">
       <div class="icon-in-circle">
-        <Icon slot="icon" icon-name="info" fill="#ffffff" width="20" height="20"></Icon>
+        <Icon
+          slot="icon"
+          icon-name="info"
+          fill="#ffffff"
+          width="20"
+          height="20"
+        ></Icon>
       </div>
     </div>
 
@@ -11,15 +17,9 @@
 
       <div class="blank-body">
         <div class="blank-item">
-          <a href="./serf/lic1.pdf" target="_blank">Лицензия №00064</a>
-          выдана Федеральной службой по надзору в сфере природопользования
-        </div>
-        <div class="blank-item">
-          <a href="./serf/lic2.pdf" target="_blank">Лицензия №00064</a>
-          выдана Федеральной службой по надзору в сфере природопользования
-        </div>
-        <div class="blank-item">
-          <a href="./serf/lic3.pdf" target="_blank">Лицензия №00064</a>
+          <a href="./serf/licence-s-full.pdf" target="_blank"
+            >Лицензия №00064</a
+          >
           выдана Федеральной службой по надзору в сфере природопользования
         </div>
         <!-- <div class="blank-body-row">
