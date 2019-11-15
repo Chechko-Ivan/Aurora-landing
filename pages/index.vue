@@ -31,6 +31,24 @@
                 ></Icon
                 >г. Смоленск, <br />ул.Энгельса, дом №23, офис 426
               </ActionLink>
+              <br />
+              <ActionLink
+                data-aos="zoom-out"
+                data-aos-delay="800"
+                :href="
+                  `http://maps.yandex.ru/?text=${OFFICE_BELARUS_COORDINATES}`
+                "
+              >
+                <Icon
+                  slot="icon"
+                  icon-name="pin"
+                  fill="#f16922"
+                  width="32"
+                  height="32"
+                ></Icon
+                >РБ, Могилевская область, <br />213823 г. Бобруйск, ул.
+                Бахарова, 206.
+              </ActionLink>
             </Col>
 
             <Col :xl="{ span: 4 }" :lg="{ span: 8 }" :sm="{ span: 6 }">
@@ -372,7 +390,10 @@ import FormFieldRow from '~/components/FormFieldRow.vue'
 import FormFieldTextarea from '~/components/FormFieldTextarea.vue'
 import Button from '~/components/Button.vue'
 
-import { OFFICE_COORDINATES } from '~/assets/js/constants.js'
+import {
+  OFFICE_COORDINATES,
+  OFFICE_BELARUS_COORDINATES
+} from '~/assets/js/constants.js'
 import validateEmail from '~/assets/js/validateEmail.js'
 
 export default {
@@ -399,6 +420,7 @@ export default {
   data() {
     return {
       OFFICE_COORDINATES,
+      OFFICE_BELARUS_COORDINATES,
       layout: {
         gutterDesktop: 20,
         gutterMobile: 10

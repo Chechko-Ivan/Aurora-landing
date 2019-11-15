@@ -14,10 +14,10 @@ export default {
 .navbar {
   display: flex;
   align-items: center;
-  height: 95px;
+  height: 140px;
 
   @media (max-width: 991.98px) {
-    height: 80px;
+    /* height: 80px; */
   }
 
   @media (max-width: 575.98px) {
