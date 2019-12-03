@@ -1,5 +1,6 @@
 <template>
   <input
+    v-model="value"
     :class="['form-field', { error: error }]"
     :type="type"
     v-bind="$attrs"
@@ -19,6 +20,10 @@ export default {
       validator(value) {
         return ['email', 'number', 'tel', 'text', 'url'].includes(value)
       }
+    },
+    value: {
+      type: [String, Number],
+      default: ''
     },
     error: {
       type: Boolean,

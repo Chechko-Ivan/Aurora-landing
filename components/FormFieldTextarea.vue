@@ -1,5 +1,6 @@
 <template>
   <textarea
+    v-model="value"
     :class="['form-field-textarea', { error: error }]"
     v-bind="$attrs"
     v-on="$listeners"
@@ -12,6 +13,10 @@ export default {
   name: 'FormFieldTextarea',
   inheritAttrs: false,
   props: {
+    value: {
+      type: [String, Number],
+      default: ''
+    },
     error: {
       type: Boolean,
       default: false

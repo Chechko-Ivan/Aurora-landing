@@ -4,6 +4,7 @@
     :href="`${scheme ? `${scheme}:` : ''}${href}`"
     :target="target"
     :rel="rel"
+    v-on="$listeners"
   >
     <div class="action-link-icon">
       <slot name="icon"></slot>

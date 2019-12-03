@@ -28,8 +28,9 @@
                   fill="#f16922"
                   width="32"
                   height="32"
-                ></Icon
-                >г. Смоленск, <br />ул.Энгельса, дом №23, офис 426
+                ></Icon>
+                г. Смоленск,<br />
+                ул.Энгельса, дом №23, офис 426
               </ActionLink>
               <br />
               <ActionLink
@@ -45,9 +46,9 @@
                   fill="#f16922"
                   width="32"
                   height="32"
-                ></Icon
-                >РБ, Могилевская область, <br />213823 г. Бобруйск, ул.
-                Бахарова, 206.
+                ></Icon>
+                РБ, Могилевская область, <br />213823 г. Бобруйск, ул. Бахарова,
+                206.
               </ActionLink>
             </Col>
 
@@ -58,15 +59,27 @@
                 data-aos-delay="1000"
               >
                 <span class="header-info-work-time">с 9:00 до 21:00</span>
-                <ActionLink href="+74956404886" scheme="tel"
-                  >+7 495 640-48-86</ActionLink
+                <ActionLink
+                  href="+74956404886"
+                  scheme="tel"
+                  @click="setPhoneMetriks"
                 >
-                <ActionLink href="+74959751214" scheme="tel"
-                  >+7 495 975-12-14</ActionLink
+                  +7 495 640-48-86
+                </ActionLink>
+                <ActionLink
+                  href="+74959751214"
+                  scheme="tel"
+                  @click="setPhoneMetriks"
                 >
-                <ActionLink href="+79206616576" scheme="tel"
-                  >+7 920 661-65-76</ActionLink
+                  +7 495 975-12-14
+                </ActionLink>
+                <ActionLink
+                  href="+79206616576"
+                  scheme="tel"
+                  @click="setPhoneMetriks"
                 >
+                  +7 920 661-65-76
+                </ActionLink>
               </div>
             </Col>
           </Row>
@@ -144,9 +157,9 @@
               </WasteItem>
 
               <WasteItem data-aos="fade" data-aos-delay="400">
-                <template slot="title"
-                  >Штапик оконный с резинкой TPE и EPDM и без</template
-                >
+                <template slot="title">
+                  Штапик оконный с резинкой TPE и EPDM и без
+                </template>
               </WasteItem>
 
               <WasteItem data-aos="fade" data-aos-delay="400">
@@ -158,21 +171,21 @@
               <WasteCircle></WasteCircle>
 
               <WasteItem data-aos="fade" data-aos-delay="200">
-                <template slot="title"
-                  >Подоконник ПВХ, кроме ДПК</template
-                >
+                <template slot="title">
+                  Подоконник ПВХ, кроме ДПК
+                </template>
               </WasteItem>
 
               <WasteItem data-aos="fade" data-aos-delay="400">
-                <template slot="title"
-                  >Мебельная пленка ПВХ однослойная</template
-                >
+                <template slot="title">
+                  Мебельная пленка ПВХ однослойная
+                </template>
               </WasteItem>
 
               <WasteItem data-aos="fade" data-aos-delay="400">
-                <template slot="title"
-                  >Литники ПВХ</template
-                >
+                <template slot="title">
+                  Литники ПВХ
+                </template>
               </WasteItem>
             </div>
           </Col>
@@ -235,9 +248,9 @@
           <Col :span="24">
             <h2 class="s-form-title" data-aos="fade" data-aos-delay="200">
               Отходы Ваши –
-              <span class="accent" data-aos="fade" data-aos-delay="450"
-                >товары и деньги наши</span
-              >
+              <span class="accent" data-aos="fade" data-aos-delay="450">
+                товары и деньги наши
+              </span>
             </h2>
           </Col>
 
@@ -258,6 +271,7 @@
                 <FormField
                   placeholder="* Представьтесь"
                   :error="name.error"
+                  :value="name.value"
                   @update="(e) => (name.value = e)"
                 ></FormField>
               </FormFieldRow>
@@ -267,12 +281,14 @@
                   type="tel"
                   placeholder="* Контактный телефон"
                   :error="phone.error"
+                  :value="phone.value"
                   @update="(e) => (phone.value = e)"
                 ></FormField>
                 <FormField
                   type="email"
                   placeholder="Контактный e-mail"
                   :error="email.error"
+                  :value="email.value"
                   @update="(e) => (email.value = e)"
                 ></FormField>
               </FormFieldRow>
@@ -281,61 +297,78 @@
                 <FormFieldTextarea
                   placeholder="* Сообщение"
                   :error="message.error"
+                  :value="message.value"
                   @update="(e) => (message.value = e)"
                 ></FormFieldTextarea>
               </FormFieldRow>
 
               <div class="form-action">
                 <Button type="submit" @click.prevent="send">Отправить</Button>
-                <div class="form-action-message">
+                <!-- <div class="form-action-message">
                   Нажимая на кнопку я подтверждаю свое согласие с правилами
                   сервиса и даю согласие на обработку моих персональных данных
-                </div>
+                </div> -->
               </div>
 
               <div class="form-contact">
-                <ActionLink scheme="tel" href="+74956404886">
+                <ActionLink
+                  scheme="tel"
+                  href="+74956404886"
+                  @click="setPhoneMetriks"
+                >
                   <Icon
                     slot="icon"
                     icon-name="tel"
                     fill="#f16922"
                     width="18"
                     height="18"
-                  ></Icon
-                  >+7 495 640-48-86
+                  ></Icon>
+                  +7 495 640-48-86
                 </ActionLink>
 
-                <ActionLink scheme="tel" href="+74959751214">
+                <ActionLink
+                  scheme="tel"
+                  href="+74959751214"
+                  @click="setPhoneMetriks"
+                >
                   <Icon
                     slot="icon"
                     icon-name="tel"
                     fill="#f16922"
                     width="18"
                     height="18"
-                  ></Icon
-                  >+7 495 975-12-14
+                  ></Icon>
+                  +7 495 975-12-14
                 </ActionLink>
 
-                <ActionLink scheme="tel" href="+79206616576">
+                <ActionLink
+                  scheme="tel"
+                  href="+79206616576"
+                  @click="setPhoneMetriks"
+                >
                   <Icon
                     slot="icon"
                     icon-name="tel"
                     fill="#f16922"
                     width="18"
                     height="18"
-                  ></Icon
-                  >+7 920 661-65-76
+                  ></Icon>
+                  +7 920 661-65-76
                 </ActionLink>
 
-                <ActionLink scheme="mailto" href="info@othodi-pvh.ru">
+                <ActionLink
+                  scheme="mailto"
+                  href="info@othodi-pvh.ru"
+                  @click="setMailMetriks"
+                >
                   <Icon
                     slot="icon"
                     icon-name="mail"
                     fill="#f16922"
                     width="18"
                     height="18"
-                  ></Icon
-                  >info@othodi-pvh.ru
+                  ></Icon>
+                  info@othodi-pvh.ru
                 </ActionLink>
               </div>
             </Form>
@@ -354,18 +387,19 @@
         >
           &copy; 2019 ООО «Секвойя»
         </div>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="#" data-aos="fade" data-aos-delay="200" data-aos-offset="0"
-          >Политика обработки персональных данных</a
-        >
+        <!-- &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#" data-aos="fade" data-aos-delay="200" data-aos-offset="0">
+          Политика обработки персональных данных
+        </a> -->
         <span class="bull">&bull;</span>
         <a
           href="https://maksis.by"
           data-aos="fade"
           data-aos-delay="300"
           data-aos-offset="0"
-          >Разработано студией Maksis</a
         >
+          Разработано студией Maksis
+        </a>
       </div>
     </footer>
   </div>
@@ -433,6 +467,22 @@ export default {
   },
 
   methods: {
+    setPhoneMetriks() {
+      this.$metrika.reachGoal('tel')
+      this.$gtag('event', 'zvonok', {
+        event_category: 'click',
+        event_action: 'tel'
+      })
+    },
+
+    setMailMetriks() {
+      this.$metrika.reachGoal('email')
+      this.$gtag('event', 'zvonok', {
+        event_category: 'click',
+        event_action: 'email'
+      })
+    },
+
     validate() {
       const errors = {}
       const { name, phone, email, message } = this
@@ -501,6 +551,12 @@ export default {
               this.phone.value = ''
               this.email.value = ''
               this.message.value = ''
+
+              this.$metrika.reachGoal('forma')
+              this.$gtag('event', 'formasend', {
+                event_category: 'send',
+                event_action: 'forma'
+              })
             } else {
               this.$notification.open({
                 class: 'custome-ant-notification',

@@ -1,6 +1,8 @@
 export default {
   mode: 'spa',
-  generate: { fallback: true },
+  generate: {
+    fallback: true
+  },
   head: {
     title:
       'ООО "Секвойя" | Закупка и переработка отходов ПВХ на постоянной основе',
@@ -42,7 +44,10 @@ export default {
       }
     ],
     link: [
-      { rel: 'apple-touch-icon', href: '/favicon/apple-touch-icon.png' },
+      {
+        rel: 'apple-touch-icon',
+        href: '/favicon/apple-touch-icon.png'
+      },
       {
         rel: 'icon',
         type: 'image/png',
@@ -60,8 +65,14 @@ export default {
         color: '#5bbad5',
         href: '/favicon/safari-pinned-tab.svg'
       },
-      { rel: 'msapplication-TileColor', content: '#2d89ef' },
-      { rel: 'theme-color', content: '#ffffff' }
+      {
+        rel: 'msapplication-TileColor',
+        content: '#2d89ef'
+      },
+      {
+        rel: 'theme-color',
+        content: '#ffffff'
+      }
     ]
   },
   loading: {
@@ -75,8 +86,12 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '~/plugins/aos.js', ssr: false },
-    '~/plugins/antdNotification.js'
+    {
+      src: '~/plugins/aos.js',
+      ssr: false
+    },
+    '~/plugins/antdNotification.js',
+    '~/plugins/ym.js'
   ],
   /*
    ** Nuxt.js dev-modules
@@ -85,7 +100,14 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: [
+    [
+      '@nuxtjs/google-gtag',
+      {
+        id: 'UA-153612798-1'
+      }
+    ]
+  ],
   /*
    ** Build configuration
    */
@@ -94,30 +116,6 @@ export default {
      ** You can extend webpack config here
      */
     // extend(config, ctx) {},
-    babel: {
-      // presets({ isServer }) {
-      //   return [
-      //     [
-      //       '@nuxt/babel-preset-app',
-      //       {
-      //         targets: isServer
-      //           ? { node: 'current' }
-      //           : {
-      //               browsers: [
-      //                 'last 2 versions',
-      //                 'not ie 11',
-      //                 'not dead',
-      //                 'not ie_mob 11',
-      //                 'not op_mini all',
-      //                 'not op_mob > 0',
-      //                 'not and_qq > 0',
-      //                 'not android > 0'
-      //               ]
-      //             }
-      //       }
-      //     ]
-      //   ]
-      // }
-    }
+    babel: {}
   }
 }
