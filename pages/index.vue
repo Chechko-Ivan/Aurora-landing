@@ -12,11 +12,19 @@
         />
         <Navbar>
           <Row :gutter="{ xs: layout.gutterMobile, md: layout.gutterDesktop }">
-            <Col :xl="{ offset: 2 }" :lg="{ span: 6 }" :sm="{ span: 8 }">
+            <Col
+              :xl="{ offset: 2 }"
+              :lg="{ span: 6 }"
+              :sm="{ span: 8 }"
+              class="header-logo"
+            >
               <Logo data-aos="zoom-out" data-aos-delay="600"></Logo>
             </Col>
 
-            <Col :lg="{ span: 8, offset: 2 }" :sm="{ span: 10 }">
+            <Col
+              :lg="{ span: 8, offset: 2 }"
+              :sm="{ span: 10 }"
+            >
               <ActionLink
                 data-aos="zoom-out"
                 data-aos-delay="800"
@@ -32,7 +40,7 @@
                 г. Смоленск,<br />
                 ул.Энгельса, дом №23, офис 426
               </ActionLink>
-              <br />
+              <!-- <br />
               <ActionLink
                 data-aos="zoom-out"
                 data-aos-delay="800"
@@ -49,10 +57,60 @@
                 ></Icon>
                 РБ, Могилевская область, <br />213823 г. Бобруйск, ул. Бахарова,
                 206.
-              </ActionLink>
+              </ActionLink> -->
             </Col>
 
-            <Col :xl="{ span: 4 }" :lg="{ span: 8 }" :sm="{ span: 6 }">
+            <Col
+              :xl="{ span: 4 }"
+              :lg="{ span: 8 }"
+              :sm="{ span: 6 }"
+            >
+              <div
+                class="header-info"
+                data-aos="zoom-out"
+                data-aos-delay="1000"
+              >
+                <ActionLink
+                  href="+74956404886"
+                  scheme="tel"
+                  @click="setPhoneMetriks"
+                >
+                  +7 495 640-48-86
+                </ActionLink>
+                <ActionLink
+                  href="+74959751214"
+                  scheme="tel"
+                  @click="setPhoneMetriks"
+                >
+                  +7 495 975-12-14
+                </ActionLink>
+                <ActionLink
+                  href="+79206616576"
+                  scheme="tel"
+                  @click="setPhoneMetriks"
+                >
+                  +7 920 661-65-76
+                </ActionLink>
+              </div>
+            </Col>
+
+            <!-- <Col :span="12" class="visible-xs">
+              <ActionLink
+                data-aos="zoom-out"
+                data-aos-delay="800"
+                :href="`http://maps.yandex.ru/?text=${OFFICE_COORDINATES}`"
+              >
+                <Icon
+                  slot="icon"
+                  icon-name="pin"
+                  fill="#f16922"
+                  width="32"
+                  height="32"
+                ></Icon>
+                г. Смоленск,<br />
+                ул.Энгельса, дом №23, офис 426
+              </ActionLink>
+              <br />
               <div
                 class="header-info"
                 data-aos="zoom-out"
@@ -81,7 +139,49 @@
                   +7 920 661-65-76
                 </ActionLink>
               </div>
-            </Col>
+            </Col> -->
+
+            <!-- <Col :span="12" class="visible-xs">
+              <ActionLink
+                data-aos="zoom-out"
+                data-aos-delay="800"
+                :href="
+                  `http://maps.yandex.ru/?text=${OFFICE_BELARUS_COORDINATES}`
+                "
+              >
+                <Icon
+                  slot="icon"
+                  icon-name="pin"
+                  fill="#f16922"
+                  width="32"
+                  height="32"
+                ></Icon>
+                РБ, Могилевская область, <br />213823 г. Бобруйск, ул. Бахарова,
+                206.
+              </ActionLink>
+              <br />
+              <div
+                class="header-info"
+                data-aos="zoom-out"
+                data-aos-delay="1000"
+              >
+                <span class="header-info-work-time">с 9:00 до 21:00</span>
+                <ActionLink
+                  href="+375225485556"
+                  scheme="tel"
+                  @click="setPhoneMetriks"
+                >
+                  +375 225 48 55 56
+                </ActionLink>
+                <ActionLink
+                  href="+375225496767"
+                  scheme="tel"
+                  @click="setPhoneMetriks"
+                >
+                  +375 225 49 67 67
+                </ActionLink>
+              </div>
+            </Col> -->
           </Row>
         </Navbar>
       </Container>
@@ -581,6 +681,20 @@ export default {
 </script>
 
 <style lang="scss">
+.hidden-xs {
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+}
+
+.visible-xs {
+  display: none;
+
+  @media (max-width: 575.98px) {
+    display: block;
+  }
+}
+
 // Header
 .header {
   position: relative;
@@ -611,10 +725,11 @@ export default {
     }
 
     @media (max-width: 767.98px) {
-      font-size: 13px;
+      font-size: 14px;
     }
 
     @media (max-width: 575.98px) {
+      font-size: 18px;
       color: var(--color-from-hell);
     }
   }
@@ -638,6 +753,24 @@ export default {
         display: none;
       }
     }
+  }
+}
+
+/* .header-address {
+  @media (max-width: 575.98px) {
+    display: flex;
+    justify-content: space-between;
+
+    .action-link {
+      max-width: 160px;
+    }
+  }
+} */
+
+.header-logo {
+  @media (max-width: 575.98px) {
+    display: flex;
+    justify-content: center;
   }
 }
 

@@ -25,7 +25,12 @@ export default {
   }
 
   @media (max-width: 767.98px) {
-    font-size: 22px;
+    font-size: 25px;
+  }
+
+  @media (max-width: 575.98px) {
+    margin-top: 10px;
+    font-size: 27px;
   }
 
   span {

@@ -45,6 +45,7 @@ export default {
   color: #000000;
   transition: all 0.25s ease;
   box-sizing: border-box;
+  font-family: inherit;
 
   &::placeholder {
     color: #a1a8c2;
