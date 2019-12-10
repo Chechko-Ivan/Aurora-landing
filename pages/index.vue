@@ -21,10 +21,7 @@
               <Logo data-aos="zoom-out" data-aos-delay="600"></Logo>
             </Col>
 
-            <Col
-              :lg="{ span: 8, offset: 2 }"
-              :sm="{ span: 10 }"
-            >
+            <Col :lg="{ span: 8, offset: 2 }" :sm="{ span: 10 }">
               <ActionLink
                 data-aos="zoom-out"
                 data-aos-delay="800"
@@ -60,11 +57,7 @@
               </ActionLink> -->
             </Col>
 
-            <Col
-              :xl="{ span: 4 }"
-              :lg="{ span: 8 }"
-              :sm="{ span: 6 }"
-            >
+            <Col :xl="{ span: 4 }" :lg="{ span: 8 }" :sm="{ span: 6 }">
               <div
                 class="header-info"
                 data-aos="zoom-out"
@@ -331,7 +324,7 @@
               </div>
 
               <img
-                src="../static/images/contract.svg"
+                src="~/static/images/contract.svg"
                 alt="icon"
                 data-aos="zoom-out"
                 data-aos-delay="200"
@@ -403,7 +396,12 @@
               </FormFieldRow>
 
               <div class="form-action">
-                <Button type="submit" @click.prevent="send">Отправить</Button>
+                <Button
+                  type="submit"
+                  @click.prevent="formLoked ? null : send()"
+                >
+                  Отправить
+                </Button>
                 <!-- <div class="form-action-message">
                   Нажимая на кнопку я подтверждаю свое согласие с правилами
                   сервиса и даю согласие на обработку моих персональных данных
@@ -562,7 +560,8 @@ export default {
       name: { value: '', error: null },
       phone: { value: '', error: null },
       email: { value: '', error: null },
-      message: { value: '', error: null }
+      message: { value: '', error: null },
+      formLoked: false
     }
   },
 
@@ -621,6 +620,7 @@ export default {
 
     send() {
       if (this.validate()) {
+        this.formLoked = true
         const { name, phone, email, message } = this
 
         const body = new FormData()
@@ -665,6 +665,8 @@ export default {
                 description: res.error
               })
             }
+
+            this.formLoked = false
           })
       } else {
         this.$notification.open({
