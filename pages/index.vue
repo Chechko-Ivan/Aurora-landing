@@ -71,6 +71,13 @@
                   +7 495 640-48-86
                 </ActionLink>
                 <ActionLink
+                  href="+79261991597"
+                  scheme="tel"
+                  @click="setPhoneMetriks"
+                >
+                  +7 926 199-15-97
+                </ActionLink>
+                <!-- <ActionLink
                   href="+74959751214"
                   scheme="tel"
                   @click="setPhoneMetriks"
@@ -83,7 +90,7 @@
                   @click="setPhoneMetriks"
                 >
                   +7 920 661-65-76
-                </ActionLink>
+                </ActionLink> -->
               </div>
             </Col>
 
@@ -426,6 +433,21 @@
 
                 <ActionLink
                   scheme="tel"
+                  href="+79261991597"
+                  @click="setPhoneMetriks"
+                >
+                  <Icon
+                    slot="icon"
+                    icon-name="tel"
+                    fill="#f16922"
+                    width="18"
+                    height="18"
+                  ></Icon>
+                  +7 926 199-15-97
+                </ActionLink>
+
+                <!-- <ActionLink
+                  scheme="tel"
                   href="+74959751214"
                   @click="setPhoneMetriks"
                 >
@@ -452,7 +474,7 @@
                     height="18"
                   ></Icon>
                   +7 920 661-65-76
-                </ActionLink>
+                </ActionLink> -->
 
                 <ActionLink
                   scheme="mailto"

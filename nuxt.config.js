@@ -1,8 +1,10 @@
 export default {
-  mode: 'spa',
+  mode: 'universal',
+
   generate: {
     fallback: true
   },
+
   head: {
     title:
       'ООО "Секвойя" | Закупка и переработка отходов ПВХ на постоянной основе',
@@ -75,16 +77,13 @@ export default {
       }
     ]
   },
+
   loading: {
     color: '#F16922'
   },
-  /*
-   ** Global CSS
-   */
+
   css: ['~/assets/style/style.scss'],
-  /*
-   ** Plugins to load before mounting the App
-   */
+
   plugins: [
     {
       src: '~/plugins/aos.js',
@@ -93,13 +92,9 @@ export default {
     '~/plugins/antdNotification.js',
     '~/plugins/ym.js'
   ],
-  /*
-   ** Nuxt.js dev-modules
-   */
+
   buildModules: [],
-  /*
-   ** Nuxt.js modules
-   */
+
   modules: [
     [
       '@nuxtjs/google-gtag',
@@ -108,14 +103,8 @@ export default {
       }
     ]
   ],
-  /*
-   ** Build configuration
-   */
+
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    // extend(config, ctx) {},
     babel: {}
   }
 }
